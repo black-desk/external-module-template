@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Chen Linxuan <me@black-desk.cn>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+[submodule ".format"]
+	path = .format
+	url = https://github.com/black-desk/.format
+[submodule ".prompts"]
+	path = .prompts
+	url = https://github.com/black-desk/.prompts
