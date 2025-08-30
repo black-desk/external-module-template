@@ -86,11 +86,12 @@ dmesg | tail  # Check test results
 sudo rmmod template_test # Unload test module
 ```
 
-### Available Make Targets
+## Available Make Targets
 
 The Makefile transparently passes all targets to the kernel build system (kbuild). Common targets include:
 
 - `make` - Build the module
+- `make compile_commands.json` - Create compile commands file for LSP servers
 - `make clean` - Clean build artifacts
 - `make modules_install` - Install the module to system
 - `make help` - Show available targets and usage

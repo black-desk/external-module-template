@@ -80,11 +80,12 @@ dmesg | tail  # 检查测试结果
 sudo rmmod template_test # 卸载测试模块
 ```
 
-### 可用的Make目标
+## 可用的Make目标
 
 Makefile会透明地将所有目标传递给内核构建系统（kbuild）。常用目标包括：
 
 - `make` - 构建模块
+- `make compile_commands.json` - 为LSP server创建编译命令文件
 - `make clean` - 清理构建产物
 - `make modules_install` - 将模块安装到系统
 - `make help` - 显示可用目标和用法
