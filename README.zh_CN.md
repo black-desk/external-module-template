@@ -69,15 +69,21 @@ SPDX-License-Identifier: GPL-2.0-only
 用于开发外部（树外）Linux内核模块的模板项目。
 此模板提供了构建内核模块的完整设置，并支持可选的KUnit测试。
 
-## KUnit
+## 构建系统
 
-当内核配置中启用`CONFIG_KUNIT`时，KUnit测试会自动构建。测试模块将与主模块一起构建：
+本项目使用autotools进行配置和构建管理。
+
+### 构建
 
 ```bash
+./configure
 make
-sudo insmod template_test.ko # 加载测试模块
-dmesg | tail  # 检查测试结果
-sudo rmmod template_test # 卸载测试模块
+```
+
+### 配置选项
+
+```bash
+./configure --help
 ```
 
 ## 可用的Make目标

@@ -75,15 +75,21 @@ A template for developing external (out-of-tree) Linux kernel modules.
 This template provides a complete setup for building kernel modules
 with optional KUnit testing support.
 
-## KUnit
+## Build System
 
-KUnit tests are built automatically when `CONFIG_KUNIT` is enabled in the kernel configuration. The test module will be built alongside the main module:
+This project uses autotools for configuration and build management.
+
+### Building
 
 ```bash
+./configure
 make
-sudo insmod template_test.ko # Load test module
-dmesg | tail  # Check test results
-sudo rmmod template_test # Unload test module
+```
+
+### Configuration Options
+
+```bash
+./configure --help
 ```
 
 ## Available Make Targets

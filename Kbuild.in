@@ -13,6 +13,8 @@ $(MODULE_NAME)-objs := src/template.o # TODO: Update source file name
 
 # KUnit test module (conditional compilation)
 ifdef CONFIG_KUNIT
+ifeq (@ENABLE_KUNIT_TEST@, 1) # ENABLE_KUNIT_TEST
 obj-m += $(MODULE_NAME)_test.o
 $(MODULE_NAME)_test-objs := src/template_test.o # TODO: Update test source file name
+endif
 endif

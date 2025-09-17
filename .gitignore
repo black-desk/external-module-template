@@ -184,3 +184,8 @@ sphinx_*/
 
 # Rust analyzer configuration
 /rust-project.json
+
+/autom4te.cache
+/config.log
+/config.status
+/Kbuild
